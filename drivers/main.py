@@ -10,7 +10,7 @@ import kmeanconf as kc
 from analysis.corelib import core, inspect, predict, classifier, optpriors, jar, mlsamples, summary
 
 #--from qpdlib
-#from analysis.qpdlib import g1T
+from analysis.qpdlib import g1T
 
 #--from obslib
 #from analysis.obslib import wormgear
@@ -24,13 +24,16 @@ except: wdir = None
 
 Q2 = 4
 
+#g1T.gen_xf(wdir,Q2)
+#g1T.plot_xf(wdir,Q2,mode=0)                
+#g1T.plot_xf(wdir,Q2,mode=1)                
 #sys.exit()
 
 ######################
 ##--Initial Processing
 ######################
 
-inspect.get_msr_inspected(wdir,limit=3.0)
+inspect.get_msr_inspected(wdir,limit=None)
 predict.get_predictions(wdir,force=False)
 classifier.gen_labels(wdir,kc)
 jar.gen_jar_file(wdir,kc)

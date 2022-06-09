@@ -97,9 +97,11 @@ if __name__=='__main__':
               gen_script(track,args.directory,None,INPUT=args.INPUT)
               if args.test:
                   os.system('source current.local')
+                  os.remove('current.local')
                   break
               else:
                   os.system('source current.local')
+                  os.remove('current.local')
               if cnt==args.njobs: break
               time.sleep(1)
 
