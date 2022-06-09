@@ -39,6 +39,7 @@ def get_msr_inspected(wdir,limit=3):
     print('\nget msr inspected (filtered msr files) using %s\n'%wdir)
     load_config('%s/input.py'%wdir)
 
+    if limit==None: limit = 1000000
 
     if 'FILT' in conf: 
         FILT = conf['FILT']

@@ -67,7 +67,7 @@ def get_predictions(wdir,force=False,ncores=1,mod_conf=None,name=''):
     datasets = copy.copy(conf['datasets'])
        
     obsres={}
-    if 'wormgear'     in conf['datasets'] : obsres['wormgear']     = resman.idis_res
+    if 'wormgear'     in conf['datasets'] : obsres['wormgear']     = resman.wormgear_res
     #--setup big table to store all we want
     data={}
     data['name'] = [] 
